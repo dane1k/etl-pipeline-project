@@ -20,5 +20,6 @@ data.rename(columns={"Date": "date"}, inplace=True)
 data.to_sql("stocks_data", engine, if_exists="replace", index=False)
 print("Data has been transfered to stocks_data")
 
+# testing
 df = pd.read_sql("SELECT * FROM stocks_data", engine)
 print(df.head())
